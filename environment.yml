@@ -1,0 +1,15 @@
+name: revenue-optimization
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - scip
+  - ipopt
+  - pip
+  - pip:
+    - streamlit
+    - pyomo
+    - pyscipopt
+    - numpy
+    - pandas
+    - plotly
