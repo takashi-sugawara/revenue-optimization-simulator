@@ -21,9 +21,16 @@ class OptimizationResult:
 
 DUAL_TOLERANCE = 1e-6
 
-# macOS環境向け：Streamlit実行時にソルバーのパスが通っていない問題を自動解決する
-# Homebrew (scip) と Anaconda (ipopt) のパスを追加
-for path in ["/opt/homebrew/bin", "/opt/anaconda3/bin", "/usr/local/bin"]:
+import sys
+# macOS環境 / Streamlit Cloud環境向け：実行時にソルバーのパスが通っていない問題を自動解決する
+# Homebrew (scip), Anaconda (ipopt), および現在のPython環境のbinディレクトリを追加
+for path in [
+    "/opt/homebrew/bin", 
+    "/opt/anaconda3/bin", 
+    "/usr/local/bin",
+    os.path.join(sys.prefix, "bin"),         # Conda環境 (Streamlit Cloudなど)
+    "/home/appuser/.conda/bin"               # Streamlit Cloudのフォールバック
+]:
     if path not in os.environ.get("PATH", ""):
         os.environ["PATH"] += os.pathsep + path
 
