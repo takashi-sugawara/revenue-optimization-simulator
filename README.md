@@ -2,7 +2,7 @@
 
 This is an interactive web application built with Streamlit and Pyomo that solves a revenue maximization problem using mathematical optimization (MINLP). It provides intuitive what-if analysis, shadow price evaluation, and sensitivity analysis through dynamic Plotly charts.
 
-**[Try the Live App on Streamlit Community Cloud](https://share.streamlit.io/)** *([Link to be updated after deployment](https://revenue-optimization-simulator-jgyaappgjvviyf3gtyblkhi.streamlit.app/))*
+**[Try the Live App on Streamlit Community Cloud](https://share.streamlit.io/)** *([Link](https://revenue-optimization-simulator-jgyaappgjvviyf3gtyblkhi.streamlit.app/))*
 
 ---
 
